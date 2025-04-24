@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="GUI.js" type="module" defer></script>
+    <link rel="stylesheet" href="Yatzy.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="diceContainer">
+        <div class="item"><img id="terning1" src="Kugle blank.png" class="tegning" /></div>
+        <div class="item"><img id="terning2" src="Kugle blank.png" class="tegning" /></div>
+        <div class="item"><img id="terning3" src="Kugle blank.png" class="tegning" /></div>
+        <div class="item"><img id="terning4" src="Kugle blank.png" class="tegning" /></div>
+        <div class="item"><img id="terning5" src="Kugle blank.png" class="tegning" /></div>
+        <button id="button1"></button>
+        <input type="0" id ="throwCounter">
+        <!-- <audio id="myAudio"> -->
+            <source src="strike.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div id="pointsContainer">
+
+        <label id="sames1" class="label">1-S</label><input id="samesInput1" class="input" type="text" value="0"
+            readonly />
+        <label id="sames2" class="label">2-S</label><input id="samesInput2" class="input" type="text" value="0"
+            readonly />
+        <label id="sames3" class="label">3-S</label><input id="samesInput3" class="input" type="text" value="0"
+            readonly />
+        <label id="sames4" class="label">4-S</label><input id="samesInput4" class="input" type="text" value="0"
+            readonly />
+        <label id="sames5" class="label">5-S</label><input id="samesInput5" class="input" type="text" value="0"
+            readonly />
+        <label id="sames6" class="label">6-S</label><input id="samesInput6" class="input" type="text" value="0"
+            readonly />
+
+        <label id="sumAfSames" class="labelSumValues">SUM</label><input id="samesAfSamesInput" class="inputValues"
+            type="text" value="0" readonly />
+        <label id="sumBonus" class="labelBonus">BONUS</label><input id="sumBonusInput" class="inputBonus" type="text"
+            value="0" />
+
+        <label class="mellemrum"></label>
+
+        <label id="special1" class="labelSpecial">One Pair</label><input id="specialInput1" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special2" class="labelSpecial">Two Pairs</label><input id="specialInput2" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special3" class="labelSpecial">Threesame</label><input id="specialInput3" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special4" class="labelSpecial">Foursame</label><input id="specialInput4" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special5" class="labelSpecial">FullHouse</label><input id="specialInput5" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special6" class="labelSpecial">SmallStr.</label><input id="specialInput6" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special7" class="labelSpecial">LargeStr.</label><input id="specialInput7" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special8" class="labelSpecial">Chance</label><input id="specialInput8" class="inputSpecial"
+            type="text" value="0" readonly />
+        <label id="special9" class="labelSpecial">Yatzy</label><input id="specialInput9" class="inputSpecial"
+            type="text" value="0" readonly />
+
+        <label id="sumAfSpecial" class="labelSumSpecial">SUM</label><input id="specialInputSum" class="inputSumSpecial"
+            type="text" value="0" readonly />
+        <label id="sumTotal" class="labelTotal">TOTAL</label><input id="specialInputTotal" class="inputTotal"
+            type="text" value="0" readonly />
+    </div>
+    <label id="spillerTotal" class="labelSpiller">Antal Spiller</label><input id="specialInputSpiller" class="inputTotal"
+    type="text" value="0" readonly />
+
+
+
+
+</body>
+
+</html>

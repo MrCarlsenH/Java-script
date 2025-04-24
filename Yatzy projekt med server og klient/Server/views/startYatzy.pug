@@ -1,0 +1,30 @@
+html
+  head
+    doctype html
+    title Yatzy - Rummene
+    meta(charset="UTF-8")
+    link(rel='stylesheet', href='YatzyStart.css') 
+  body
+    div(class="container", style="display: flex; justify-content: center; align-items: center; flex-direction: column; margin-top: 20px;")
+        h1 Start et nyt spil 
+        button(class="nytSpil", style=`border: 1px solid #bacdd8; padding: 8px; border-radius: 12px; margin: 5px; background-color: red`,onclick=`window.location.href='http://localhost:8000/YatzySpillet.html'`)
+            br
+            span(style="font-weight: bold;")="START NYT SPIL"
+            br
+            br
+        h1 Se alle rum her
+        h2 Her kan du se antal spillere i spil og status
+        div(class="spiller-card", style="display: grid; grid-column-gap: 5px; align-items: center; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 8px;")
+            each spil in rooms
+                - const roomNavn = spil.game;
+                - const color = spil.status === "WAITING" ? "#f0ad4e" : spil.status === "STARTED" ? "#5cb85c" : "#777";
+                - const antalSpiller = Object.keys(spil.spillere).length
+                button(class="spil-card", style=`border: 1px solid #bacdd8; padding: 8px; border-radius: 12px; margin: 5px; background-color: ${color}`)
+                    span=" RumID: "+ roomNavn
+                    br
+                    br
+                    span="Antal spillere: " + antalSpiller
+                    br
+                    span="Status: "
+                    span(style="font-weight: bold;")= spil.status
+                  

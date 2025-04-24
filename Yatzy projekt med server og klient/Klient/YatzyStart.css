@@ -1,0 +1,27 @@
+p {
+    color: blue;
+}
+
+h1,h2,h3 {
+    /* store overskrifter */
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+body {
+    background-image: url("baggrund2.jpg");
+}
+
+button {
+    background-size: cover; /* Juster størrelsen på baggrundsbilledet */
+    background-repeat: no-repeat; /* Forhindr baggrundsbilledet i at gentage sig */
+    padding: 10px 20px; /* Standard størrelse */
+    transition: all 0.2s; /* Tilføj en overgangseffekt for glat størrelsesændring */
+}
+button:active {
+    background-image: url('TegningeKast.png'); /* Erstat 'Knap1.png' med stien til din billedfil */
+    background-size: cover; /* Juster størrelsen på baggrundsbilledet */
+    background-repeat: no-repeat; /* Forhindr baggrundsbilledet i at gentage sig */
+    transform: scale(1.9); /* Ændrer størrelsen til 90% af standardstørrelsen, når knappen er aktiv (klikket) */
+}
