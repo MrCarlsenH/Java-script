@@ -1,0 +1,201 @@
+/*  background.css */
+p {
+    color: blue;
+}
+
+h1,h2,h3 {
+    /* store overskrifter */
+    color: white;
+    background-color: gray;
+    text-align: center;
+}
+
+body {
+    background-image: url("baggrund2.jpg");
+}
+
+#diceContainer {
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: 30px auto;
+    padding: 10px;
+    /* background-color: whitesmoke; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25% 150px 30px;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 20px); */
+    gap: 20px;
+
+    /* grid-auto-flow: row; (er default) */
+}
+
+button {
+    background-image: url('TegningeKast.png'); /* Erstat 'Knap1.png' med stien til din billedfil */
+    background-size: cover; /* Juster størrelsen på baggrundsbilledet */
+    background-repeat: no-repeat; /* Forhindr baggrundsbilledet i at gentage sig */
+    grid-column-start: span 2; /* Udvid knappen til at strække over to kolonner */
+    grid-column-end: span 3; /* Knappen vil strække sig over fire kolonner */
+    padding: 10px 20px; /* Standard størrelse */
+    transition: all 0.2s; /* Tilføj en overgangseffekt for glat størrelsesændring */
+}
+button:active {
+    background-image: url('TegningeKast.png'); /* Erstat 'Knap1.png' med stien til din billedfil */
+    background-size: cover; /* Juster størrelsen på baggrundsbilledet */
+    background-repeat: no-repeat; /* Forhindr baggrundsbilledet i at gentage sig */
+    grid-column-start: span 2; /* Udvid knappen til at strække over to kolonner */
+    grid-column-end: span 3; /* Knappen vil strække sig over fire kolonner */
+    transform: scale(1.9); /* Ændrer størrelsen til 90% af standardstørrelsen, når knappen er aktiv (klikket) */
+}
+
+.tegning {
+    padding: auto;
+    transition: all 0.2s;
+}
+.tegning:hover {
+    transform: scale(1.9);
+}
+
+
+#pointsContainer {
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: 30px auto;
+    padding: 10px;
+    /* background-color: whitesmoke; */
+
+
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(16, 20px);
+    gap: 7px;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 20px); */
+}
+
+.label {
+    grid-column-start: 1;
+    border: 2px solid black;
+    background-color: red;
+    color: white;
+}
+
+.input {
+    grid-column-start: 2;
+    border: 1px solid red;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.input:hover {
+    transform: scale(1.2);
+}
+
+
+.labelSumValues {
+    grid-column-start: 3;
+    grid-row-start: 6;
+    border: 2px solid black;
+    background-color: red;
+    color: white;
+}
+
+.inputValues {
+    grid-column-start: 4;
+    grid-row-start: 6;
+    border: 1px solid red;
+    background-color: white; 
+    transition: all 0.2s;
+}
+
+.inputValues:hover {
+    transform: scale(1.2);
+}
+
+
+.labelBonus {
+    grid-column-start: 3;
+    grid-row-start: 7;
+    border: 2px solid black;
+    background-color: red;
+    color: white;
+}
+
+.inputBonus {
+    grid-column-start: 4;
+    grid-row-start: 7;
+    border: 1px solid red;
+    background-color: white; 
+    transition: all 0.2s;
+}
+
+.inputBonus:hover {
+    transform: scale(1.2);
+}
+
+.mellemrum {
+    grid-column-start: 1;
+}
+
+.labelSpecial {
+    grid-column-start: 1;
+    border: 2px solid black;
+    background-color: red;
+    color: white;
+}
+
+.inputSpecial {
+    grid-column-start: 2;
+    border: 1px solid red;
+    background-color: white; 
+    transition: all 0.2s;
+}
+
+.inputSpecial:hover {
+    transform: scale(1.2);
+}
+
+.labelSumSpecial {
+    grid-column-start: 3;
+    grid-row-start: 16;
+    border: 2px solid black;
+    background-color: red;
+    color: white;
+}
+
+.inputSumSpecial {
+    grid-column-start: 4;
+    grid-row-start: 16;
+    border: 1px solid red;
+    background-color: white; 
+    transition: all 0.2s;
+}
+
+.inputSumSpecial:hover {
+    transform: scale(1.2);
+}
+
+.labelTotal {
+    grid-column-start: 3;
+    grid-row-start: 17;
+    border: 2px solid black;
+    background-color: red;
+    color: white;
+}
+
+.inputTotal {
+    grid-column-start: 4;
+    grid-row-start: 17;
+    border: 1px solid red;
+    background-color: white; 
+    transition: all 0.2s;
+}
+
+.inputTotal:hover {
+    transform: scale(1.2);
+}
+
+.held{
+    background-color: yellow;
+}
